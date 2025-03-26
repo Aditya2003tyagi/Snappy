@@ -26,7 +26,9 @@ app.use(cors(corsOption));
 // routes
 app.use("/api/v1/user",userRoute); 
 app.use("/api/v1/message",messageRoute);
- 
+app.get("/health" , (req,res) => {
+    res.status(200).json({"status" : "Healthy"})
+})
 
 server.listen(PORT, ()=>{
     connectDB();
