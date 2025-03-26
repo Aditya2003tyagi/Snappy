@@ -10,7 +10,7 @@ const useGetMessages = () => {
         const fetchMessages = async () => {
             try {
                 axios.defaults.withCredentials = true;
-        const res = await axios.get(`http://localhost:7000/api/v1/message/${selectedUser?._id}`);
+        const res = await axios.get(`https://snappy-7oqj.onrender.com/api/v1/message/${selectedUser?._id}`);
         dispatch(setMessages(res.data))
     } catch (error) {
         console.log(error);

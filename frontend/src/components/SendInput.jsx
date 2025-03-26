@@ -14,7 +14,7 @@ const SendInput = () => {
   const onSubmitHandler = async(e) =>{
     e.preventDefault();
     try{
-      const res = await axios.post(`http://localhost:7000/api/v1/message/send/${selectedUser?._id}`, {message}, {
+      const res = await axios.post(`https://snappy-7oqj.onrender.com/api/v1/message/send/${selectedUser?._id}`, {message}, {
            headers:{
                  'Content-Type':'application/json'
            },

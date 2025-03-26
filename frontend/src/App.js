@@ -32,7 +32,7 @@ function App() {
 
   useEffect(()=>{
     if(authUser){
-      const socketio = io('http://localhost:7000', {
+      const socketio = io('https://snappy-7oqj.onrender.com', {
           query:{
             userId:authUser._id
           }
